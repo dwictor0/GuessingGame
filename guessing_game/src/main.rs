@@ -9,7 +9,7 @@ fn main() {
 
     let mut guess = String::new();
     io::stdin().read_line(&mut guess).expect("Erro ao ler a linha informada.");
-
+    let guess: u32 =  guess.trim().parse().expect("Digite um numero valido!");
     println!("Numero digitado: {guess}");
      match guess.cmp(&secret_number) {
         Ordering::Less => println!("Too small!"),
