@@ -10,5 +10,11 @@ fn main() {
     let mut guess = String::new();
     io::stdin().read_line(&mut guess).expect("Erro ao ler a linha informada.");
 
-    println!("Numero digitado: {guess}")
+    println!("Numero digitado: {guess}");
+     match guess.cmp(&secret_number) {
+        Ordering::Less => println!("Too small!"),
+        Ordering::Greater => println!("Too big"),
+        Ordering::Equal => println!("You win"),
+    }
+   
 }
