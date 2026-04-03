@@ -15,7 +15,10 @@ fn main() {
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("O numero secreto e maior."),
             Ordering::Greater => println!("O numero secreto e menor."),
-            Ordering::Equal => println!("Acertou!"),
+            Ordering::Equal => {
+                println!("Acertou!");
+                break;
+            }
         }
     }
 }
